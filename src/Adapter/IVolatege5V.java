@@ -1,0 +1,1 @@
+package Adapter;public interface IVolatege5V {    int output5V();}
