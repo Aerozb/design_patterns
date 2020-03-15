@@ -1,4 +1,4 @@
-package factory.abstract_factory;
+package Factory.abstract_factory;
 
 /**
  * 手机产品接口

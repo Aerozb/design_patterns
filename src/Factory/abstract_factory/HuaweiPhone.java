@@ -1,4 +1,4 @@
-package factory.abstract_factory;
+package Factory.abstract_factory;
 
 /**
  * 华为手机产品
