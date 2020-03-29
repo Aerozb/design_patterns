@@ -1,6 +1,7 @@
 package Proxy.dynamic_proxy.test;
 
 import Proxy.dynamic_proxy.agent.LisonCompany;
+import Proxy.dynamic_proxy.util.ProxyUtil;
 import Proxy.dynamic_proxy.man.IManFactory;
 import Proxy.dynamic_proxy.man.ManFactory;
 import Proxy.dynamic_proxy.woman.IWomanFactory;
@@ -30,5 +31,9 @@ public class Test {
 		IWomanFactory womanFactoryProxy = (IWomanFactory) company.getProxyInstance();
 		// 调用代理过后的方法
 		womanFactoryProxy.saleWoman(6);
+
+		//将代理类生成class文件
+		ProxyUtil.generator(manFactory.getClass(),manFactoryProxy.getClass().getSimpleName());
+		ProxyUtil.generator(womanFactory.getClass(),womanFactoryProxy.getClass().getSimpleName());
 	}
 }
